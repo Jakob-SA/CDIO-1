@@ -1,4 +1,4 @@
-package test;
+package spil;
 
 import java.util.Scanner;
 

@@ -1,4 +1,5 @@
-import test.Terningekast;
+import spil.SpillerNavne;
+import spil.Terningekast;
 
 public class Main {
     public static void main(String[] args) {
@@ -6,6 +7,8 @@ public class Main {
         Terningekast Terningekast = new Terningekast();
         Terningekast.Terninger();
 
+
+        SpillerNavne Enter = new SpillerNavne();
     }
 
 }
