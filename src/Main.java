@@ -1,23 +1,10 @@
-import java.util.Scanner;
+import test.Terningekast;
+
 public class Main {
     public static void main(String[] args) {
-        java.lang.Math.random();
-        Scanner input = new Scanner(System.in);
-        input.next();
 
-        int tal1 =(int) (Math.random()*6+1);
-        int tal2 =(int) (Math.random()*6+1);
-        int sum = tal1 + tal2;
-
-        System.out.println(tal1);
-        System.out.println(tal2);
-        System.out.println("Summen er: " + sum);
-
-
-
-
-
-
+        Terningekast Terningekast = new Terningekast();
+        Terningekast.Terninger();
 
     }
 
