@@ -1,14 +1,4 @@
 @startuml
 
-class bruger {
-    String name
-    int type
-    }
-
-class bræt
-
-bræt --|> bruger
-
-
 
 @enduml
