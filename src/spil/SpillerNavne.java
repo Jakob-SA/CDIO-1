@@ -1,6 +1,9 @@
 package spil;
 
-public class SpillerNavne {
+import java.util.Scanner;
 
+public class SpillerNavne {
+        public static void Tildelnavn() {
 
         }
+}
