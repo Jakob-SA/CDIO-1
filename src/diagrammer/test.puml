@@ -1,4 +1,20 @@
 @startuml
+@startuml
+participant Game as Foo
+actor       Players       as Foo1
+participant  PlayerTurn    as Foo2
+participant   Dicex2 as Foo3
+participant  DieSum    as Foo4
+participant  Pointscounter      as Foo5
+
+Foo -> Foo1 : Play
+Foo1 --> Foo2 : int P1Turn \nint P2Turn
+Foo1 -> Foo3 : Player roll\nmath.Random()
+Foo3 -> Foo4 : int Sum = FaceValue1 \n+ FaceValue2
+Foo4 -> Foo5 : if \n(Sum < 40 || \nP1Turn > P2Turn ||\nSum1 = Sum2)\n SwitchPlayer()\nelse\nend game()
+Foo5 -> Foo1 : Switch player
+Foo5 -> Foo : End game
+@enduml
 
 
 @enduml
