@@ -5,22 +5,34 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        CoinFlip coinFlip = new CoinFlip();                 //bestemmer hvem der starter
+        SpilStart coinFlip = new SpilStart();
+        coinFlip.names();
         coinFlip.fiftyFifty();
 
         Scanner input = new Scanner(System.in);
-        System.out.println("Skriv navn på spiller 1");          //tildeler navne til spillere
-        Players Player1 = new Players(input.nextLine());
-        System.out.println("Skriv navn på spiller 2");
-        Players Player2 = new Players(input.nextLine());
+
+        Players Player1 = new Players("a");
+        Players Player2 = new Players("b");
+
+        if (SpilStart.mont == 0) {
+            Player1.Navn = coinFlip.Spiller1Navn;
+            Player2.Navn = coinFlip.Spiller2Navn;
+        }else {
+            Player1.Navn = coinFlip.Spiller2Navn;
+            Player2.Navn = coinFlip.Spiller1Navn;
+        }
+
+
+                  //tildeler navne til spillere
+
+
+
 
         Die die1 = new Die();                               //opretter terninger
         Die die2 = new Die();
 
         Points points1 = new Points(Player1);               //opretter spillernes points
         Points points2 = new Points(Player2);
-
-
 
         while (points1.points < 40 || points2.points < 40) {
             String tast = "q";
