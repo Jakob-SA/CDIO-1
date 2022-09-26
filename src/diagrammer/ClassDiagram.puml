@@ -1,0 +1,37 @@
+@startuml
+'https://plantuml.com/class-diagram
+class Die {
+FaceValue: int
+getFaceValue()
+roll()
+}
+class Players {
+Name : String
+Point: int
+}
+class Coinflip {
+Mønt: int
+Mønt = Math.random()
+if (mønt == 1)
+System.out.println("Player1 starter")
+else()
+System.out.println("Player2 starter")
+}
+class Points {
+Point : int
+add : int
+add(die1,die2)
+}
+
+Players -- Coinflip
+Coinflip - Die
+Die "2" -- Points
+Points -- Players
+
+
+
+
+
+
+
+@enduml
