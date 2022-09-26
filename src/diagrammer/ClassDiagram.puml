@@ -23,10 +23,10 @@ add : int
 add(die1,die2)
 }
 
-Players -- Coinflip
-Coinflip - Die
-Die "2" -- Points
-Points -- Players
+Players "2" -- "1"Coinflip : Spiller om start >
+Players "2"--> "2"Die : roll >
+Die "2" --> "1.*"Points
+Points "1.*" --> Players
 
 
 
