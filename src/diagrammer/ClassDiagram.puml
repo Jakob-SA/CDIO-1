@@ -9,24 +9,26 @@ class Players {
 Name : String
 Point: int
 }
-class Coinflip {
-Mønt: int
-Mønt = Math.random()
-if (mønt == 1)
-System.out.println("Player1 starter")
-else()
-System.out.println("Player2 starter")
-}
 class Points {
 Point : int
 add : int
+redemption : int
 add(die1,die2)
+redemption(die1, die2)
+}
+class SpilStart{
+mønt : int
+tast : String
+Spiller1Navn : String
+Spiller2Navn : String
+fiftyFifty()
+name()
 }
 
-Players "2" -- "1"Coinflip : Spiller om start >
-Players "2"--> "2"Die : roll >
-Die "2" --> "1.*"Points
-Points "1.*" --> Players
+Players "2" --> "2" Die
+SpilStart "1" -- "2" Players
+Die "2" --> "2..*" Points
+Points "2..*" --> "2" Players
 
 
 
