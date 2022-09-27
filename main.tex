@@ -37,33 +37,35 @@ Her kommer indledningen...
 Godmoorgen
 
 \section{Projekt-planlægning}
-\begen {itemize}
-\item Vi strukturerede, ummidelbart efter feedback fra projektlederen, en plan for udviklingen af projektet og programmet jf. kravspecifikationerne. Vi så på opgaverne og kravene til spillet, der var var slået på plads dag 1, og prioriterede opgaverne som følgende
- \item Uge 1:
- Opgaver:
-Prioirteret. (19-09-2022) udkast.
+\begin {itemize}
+\item [\textbf{Begyndelsen:}]Vi strukturerede, umiddelbart efter feedback fra projektlederen, en plan for udviklingen af projektet og programmet jf. kravspecifikationerne. Vi så på opgaverne og kravene til spillet, der var var slået på plads dag 1, og prioriterede opgaverne som følgende
+ \item [\textbf{Uge 1:}]
+ Opgaver prioriteret. (19-09-2022) udkast.
 Versionsstyringen af programmet samt dokumentation for alle gruppemedlemmer
 Use case(s), evt. diagrammer
 Random nr generator samt test + terningkast og test.
 Interface relaterede funktioner (navn, pointtæller, turskift, antal ture)
-\item Uge 2:
+\item [\textbf{Uge 2:}]
 Opdaterede opgaver (26-09-2022)
 Opgaver løst:
 Versionering af programmet
 Diagram (sekvens)
 test af terninger
-nterface kode: navn, pointtæller, turskift, antal ture
-
-\item Nye opgaver:
-Prioriteret
+interface kode: navn, pointtæller, turskift, antal ture
+\item [\textbf{Nye opgaver:}]
+Prioriteret:
 Færdigudiviklen koden uden redepmtionfaktor
 Opdatering af sekvens diagram samt klassediagram
 Rapportere udvikling i rapporten.
 Sekundære funktioner skal implementeres (coinflip)
+\item 27-09-2022
+\item [\textbf{Opgaver løst:}] Alt kode til terningekastspillet inkl. redeptiomfaktor.
+\item [Nye opgaver]:Prioriteret: Opdatering og commit af sekvens- samt domæne diagram. Fully dressed Use-case beskrivelse af main use case + alt flow (redemption). Implementering af GUI.
+\end {itemize}
 
  
 \section{Krav/Analyse}
-For at have en mere præcis kravsspecifikation startede vi med at spørge vores projektleder om følgende spørgsmål:
+For at kunne lave en mere præcis kravsspecifikation startede vi med at spørge vores projektleder om følgende spørgsmål:
 \begin{itemize}
     \item [Q:] hvilken version af Java har maskinerne installeret?
             \subitem A: Den nyeste version (18).
@@ -76,7 +78,7 @@ For at have en mere præcis kravsspecifikation startede vi med at spørge vores 
     \item [Q:]Kan spillerne ende med mere end 40 point?
             \subitem A: Ja
     \item [Q:]Er vinderen den der når 40 point først? Hvad hvis de rammer 40 point på samme tur?
-            \subitem A: Det er antallet af ture der tæller. Hvis begge spillere får 40 eller over, i samme tur spiller, er vinderen den der slår højest i næste slag. Hvis lige fortsættes dette.
+            \subitem A: Det er antallet af ture der tæller. Hvis begge spillere får 40 eller over, i samme tur, er vinderen den der slår højest i næste slag. Hvis lige fortsættes dette.
     \item [Q:]Hvad er et almindeligt menneske?
             \subitem A: Alle der besidder over 8. klasse pc færdighed, er op til 80 år gamle og har et almindeligt helbred.
     \item [Q:] Skal spillerne have navne?
@@ -87,24 +89,62 @@ For at have en mere præcis kravsspecifikation startede vi med at spørge vores 
         \subitem A: At de virtuelle terninger, statistisk opfører sig som normale terninger.
 \end{itemize}
 
+\noindent Baseret på dette har vi produceret en fully dressed use case beskrivelse for use casen: "Spil terningespil"
+
+\subsection{Use case beskrivelse}
+\textbf{Scope:} Spil terningespil\\
+\textbf{Level:} Spillere\\
+\textbf{Primary actor:} Spiller 1 og spiller 2\\
+\textbf{Stakeholders and interests:}\\
+-Spillere: Vil have et underholdene spil der virker hurtigt og korrekt.\\
+-Projektlederne: Vil gerne kunne tilfredsstille kundens ønsker.\\
+-kunden: Vil gerne have et spil, der kan spilles på DTU's databarer.\\
+\textbf{Preconditions:} Der er styresystemet "Windows" på maskinerne og den nyeste version af Java.\\
+\textbf{Succes Guarantee:} Spillet afsluttes og angiver en vinder.\\
+\textbf{Main Succes Scenario:}\\
+\begin{enumerate}
+\itemsep-0.5em
+    \item Spillerne indtaster deres navne en af gangen
+    \item Systemet bestemmer vha. et coinflip hvilken af de to spillere der starter
+    \item Vinderen af coinflippet slår med terningerne
+    \item Systemet lægger øjnene på terningerne sammen, tæller dem som points og informere spilleren om dennes samlede point
+    \item Den anden spiller slår nu med terningerne
+    \item Systemet lægger øjnene på terningerne sammen, tæller dem som points og informere spilleren om dennes samlede point\\
+    \textit{Punkterne 3-6 gentages indtil en af spillerne opnår 40 eller flere points}
+    \item Systemet fortæller spillerne hvem der har vundet
+\end{enumerate}
+\textbf{Extensions:}\\
+\begin{enumerate}
+\itemsep-0.5em
+    \item [7a.] Begge spillere opnår 40 point i samme runde
+    \subitem 1. Systemet giver nu mulighed for at hver spiller kan kaste terningerne igen. Spilleren der slår  højest med dette ene kast vinder spillet.
+    \subitem 2. Hvis de to spilleres slag har samme værdi starter de igen fra punkt 7a.1
+
+\end{enumerate}
+
+
+
 \section{Design}
+
 
 
 \section{Implementering}
 
 \section{Test}
-Der er blevet bedt om en test af de to terninger, som indgår i vores terningespil. Hensigten ved at teste terningerne er at se p ̊a sandsynligheden for de forskellige udfald. De forskellige udfald skal stemmer overens med normalfordelingen af to terninger. En normal fordeling er karakteriserede ved at have en ”klokke”formede kurve. 
+Der er blevet bedt om en test af de to terninger, som indgår i vores terningespil. Hensigten ved at teste terningerne er at se p ̊a sandsynligheden for de forskellige udfald. De forskellige udfald skal stemmer overens med normalfordelingen for to terninger. En normal fordeling er karakteriserede ved at have en ”klokke”formede kurve. 
 
-Der vil automatisk være kast, som er hyppigere end andre, da der er flere kombinationer som giver det samme. Det vil for eksempel være tallene 5, 6 og 7, som vil være de mest hyppige kast, fordi der er flest forskellige kombinationer som kan slå disse tal. Normal fordelingen for 2 terninger kan ses p ̊a figur 7.1
+Der vil automatisk være kast, som er hyppigere end andre, da der er flere kombinationer som kan give det samme. Det vil for eksempel være tallene  6, 7 og 8, som vil være de mest hyppige kast. Tallene 6, 7 og 8 er de mest hyppige kast fordi der er flest forskellige kombinationer, der fremkommer af disse tal. 
+Normal fordelingen for 2 terninger kan ses p ̊a figur 7.1
 
 
 Billede af normalfordelingen af to terninger
 
 
-Vores test af terningerne er lavet i Intellij, som tager udgangspunkt i i de to terninger, som skal indgå i terningespillet. Terninger er blevet slået 10.000 gange for at få et mere præcis resultat. Man kan få et endnu mere præcis resultat, hvis man lavede flere terningkast, da det vil give flere observationer, og dermed en bedre normalfordeling.
+Vores test af terningerne er lavet i IntelliJ, som tager udgangspunkt i i de to terninger, som skal indgå i terningespillet. Terninger er blevet slået 10.000 gange for at få et mere præcis resultat. Man kan få et endnu mere præcis resultat, hvis man lavede flere terningkast, da det vil give flere observationer, og dermed en bedre normalfordeling.
 Testen af vores 2 terninger kan se i følgende figur 7.2
 
 - billede af test
+
 
 
 Ved at sammenligne figur 7.1 og 7.2, kan man hurtigt se at de som udgangs er meget ens. Begge figurer har en "klokke" formede kurve, som var det målet var. Der er nogle små ud svingninger i vores kurve, hvilket vil kunne løses ved at lave flere kast, som vil gøre det mere præcist 
