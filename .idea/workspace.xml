@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f49b931f-ae56-4e2a-aa41-b8b67a71d483" name="Changes" comment="Coinflip virker og har effekt på spilstarten">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gr17_del1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gr17_del1/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gr17_del1/spil/Points.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gr17_del1/spil/Points.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spil/Points.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spil/Points.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spil/SpilStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spil/SpilStart.java" afterDir="false" />
+    </list>
+    <list id="3a7fa1ed-6084-494f-91ce-c9b39f0d5c05" name="Changes by Madsf" comment="Development branch created" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="UML Sequence" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="Development" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Jakob-SA" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="terningekast" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2F0BTGv4zCoYugPhmMV2yhCyYH2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultPlantUmlFileTemplate": "UML Sequence",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "last_opened_file_path": "C:/Users/jakob/OneDrive - Danmarks Tekniske Universitet/1. semester/CDIO1/Gr17_del1/matadorgui-3.1.6.jar",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jakob\OneDrive - Danmarks Tekniske Universitet\1. semester\CDIO1\Gr17_del1" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jakob\OneDrive - Danmarks Tekniske Universitet\1. semester\CDIO1\Gr17_del1" />
+      <recent name="C:\Users\jakob\OneDrive - Danmarks Tekniske Universitet\1. semester\CDIO1\Gr17_del1\.idea" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Gr17_del1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f49b931f-ae56-4e2a-aa41-b8b67a71d483" name="Changes" comment="" />
+      <created>1663619128480</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663619128480</updated>
+      <workItem from="1663619130288" duration="2581000" />
+      <workItem from="1663671745368" duration="22342000" />
+      <workItem from="1663916157913" duration="28000" />
+      <workItem from="1663930268672" duration="7089000" />
+      <workItem from="1664193235597" duration="1019000" />
+      <workItem from="1664195506909" duration="13794000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1663620299138</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663620299152</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial commit and push">
+      <created>1663620705958</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1663620705958</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Commit to master">
+      <created>1663675264027</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1663675264027</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Opsætning af packages">
+      <created>1663747694179</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1663747694179</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Development branch created">
+      <created>1663748529823</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1663748529823</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Terninger næsten færdig">
+      <created>1663762828212</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1663762828212</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Start spillernavne kalde class i main">
+      <created>1663763572332</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1663763572332</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Implementring af terninger som objects">
+      <created>1663937611814</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1663937611815</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Spillernes point tælles. Spil stopper ved 40">
+      <created>1664200439258</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1664200439258</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Coinflip tilføjet">
+      <created>1664201912382</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1664201912382</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Coinflip virker og har effekt på spilstarten">
+      <created>1664204620092</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1664204620092</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="Initial commit and push" />
+    <MESSAGE value="Commit to master" />
+    <MESSAGE value="Opsætning af packages" />
+    <MESSAGE value="Development branch created" />
+    <MESSAGE value="Terninger næsten færdig" />
+    <MESSAGE value="Start spillernavne kalde class i main" />
+    <MESSAGE value="Implementring af terninger som objects" />
+    <MESSAGE value="Spillernes point tælles. Spil stopper ved 40" />
+    <MESSAGE value="Coinflip tilføjet" />
+    <MESSAGE value="Coinflip virker og har effekt på spilstarten" />
+    <option name="LAST_COMMIT_MESSAGE" value="Coinflip virker og har effekt på spilstarten" />
+  </component>
+</project>
