@@ -23,23 +23,36 @@
 
 \normalsize
 \begin{abstract}
-     Her kommer der et resume af opgaven
+     Denne rapport indeholder et terningespil, som er blevet udviklet på baggrund af en række krav fra kunden. Under arbejdet med terningespillet har vi hele tiden teste programmet og lavet overvejelser over om det opfylder kravene fra kunden. Derudover har vi lavet analyserede kravene ved at lave en Use Case.  Til det har vi brugt den iterativ metode. Under processen har vi testet de 2 terninger som skal indgå i terningespillet, for at se om de er normaltfordelt rigtigt. Afslutningsvis er der blevet konkluderet at at vi har opfyldt kravene fra kunden og de er blevet implementerede i Intellij.     
 \end{abstract}
+\break
 
 \tableofcontents
 
+\break
+
 \section{Timeregnskab}
+\begin{itemize}
+\item
 Arbejdsdag 1 (19-09-2022): 2,5 timer
+\item
 Arbejdsdag 2 (21-09-2022): 3 timer
+\item
 Arbejdsdag 3 (23-09-2022): 2 timer
+\item
 Arbejdsdag 4 (26-09-2022): 2,5 timer
+\item
 Arbejdsdag 5 (27-09-2022): 2 timer
-Arbejdsdag 6 (28-09-2022): 1 time
+\item
+Arbejdsdag 6 (28-09-2022): 2,5 time
+\item
 Arbejdsdag 7 (30-09-2022): 3 timer
+\end{itemize}
+
 \section{Indledning}
 
-Her kommer indledningen...
-Godmoorgen
+Denne rapport dokumenterer udviklingen af spillet Terningespil, der er udviklet på baggrund af kundens vision, kundens krav, samt vejledningen af projektlederen. Vi har forsøgt at følge (R)UP - metoden ved at være risikodrevet og fleksible i udviklingsprocessen. Vi har løbende opdateret vores opgaveprioritering og sat nye mål for de næste arbejdsdage. Vi har lavet forskellige artifakter til at hjælpe os i at forme det produkt der opfylder kundens krav mest. 
+
 
 \section{Projekt-planlægning}
 \begin {itemize}
@@ -63,9 +76,16 @@ Færdigudiviklen koden uden redepmtionfaktor
 Opdatering af sekvens diagram samt klassediagram
 Rapportere udvikling i rapporten.
 Sekundære funktioner skal implementeres (coinflip)
-\item 27-09-2022
+\item []Dag 27-09-2022]
 \item [\textbf{Opgaver løst:}] Alt kode til terningekastspillet inkl. redeptiomfaktor.
 \item [Nye opgaver]:Prioriteret: Opdatering og commit af sekvens- samt domæne diagram. Fully dressed Use-case beskrivelse af main use case + alt flow (redemption). Implementering af GUI.
+\item [Dag 28-09-2022]
+\item Opgaver færdige:
+\item Fejl i redemption loop fikset. Introduktion, dokumentering af test-af-terninger, design-klassediagram, samt use-case-beskrivelse færdiggjort.
+
+\item [Nye opgaver]
+\item Sidste opdatering af sekvensdiagram og færdiggørelse af rapport
+\item 
 \end {itemize}
 
  
@@ -136,42 +156,67 @@ For at kunne lave en mere præcis kravsspecifikation startede vi med at spørge 
 \section{Design}
 For at finde frem til vores design startede vi med at med at lave et groft sekvensdiagram. så vi kunne få et overblik over rækkefølgen for klasser, objekter og metoder.\\
 INDSÆT SEKVENSDIAGRAM (STARTEN) MÅSKE OGSÅ DESIGN-KLASSE-DIAGRAM\\
-\item 
-\includegraphics[width=0.50\textwidth] {Billeder/ClassDiagram.png} \item\textit{Tabel 5.1 - Design-klassediagram}\item \item
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = 0.5\textwidth]{Billeder/ClassDiagram.png}
+    \caption{Design-klassediagram}
+    \label{fig:Design-klassediagram}
+\end{figure}
+
 Herefter var planen at starte med at implementere det funktionelle krav som enten bar mest risiko eller var vigtigst for spillet. Vi prioriterede derfor kravene således
+
 \begin{enumerate}
 \itemsep-0.4em
     \item Terninger - 2 stk. der kan kastes for at ændre deres øjenværdi
     \item Points - Tæller øjenværdierne fra de to terninger sammen
     \item Spillere - 2 stk. der hver har sine egne points og kan tildeles navne
     \item Afslutning - erklærer en vinder baseret på points og slutter spillet
-    \item Redemption - Håndtere situation hvor begge spillere når 40 points eller over
+    \item Redemption - Håndterer situation hvor begge spillere når 40 points eller over
 \end{enumerate}
 
 
 \section{Implementering}
 
 \section{Test}
-Der er blevet bedt om en test af de to terninger, som indgår i vores terningespil. Hensigten ved at teste terningerne er at se på sandsynligheden for de forskellige udfald. De forskellige udfald skal stemmer overens med normalfordelingen for to terninger. En normal fordeling er karakteriserede ved at have en ”klokke”formede kurve. 
+Der er blevet bedt om en test af de to terninger, som indgår i vores terningespil. Hensigten ved at teste terningerne er at se på sandsynligheden for de forskellige udfald. 
+\footnote{https://emu.dk/sites/default/files/2020-06/normalfordelingen.pdf, side 7} De forskellige udfald skal stemmer overens med normalfordelingen for to terninger. En normal fordeling er karakteriserede ved at have en ”klokke”formede kurve. 
 
 Der vil automatisk være kast, som er hyppigere end andre, da der er flere kombinationer som kan give det samme. Det vil for eksempel være tallene  6, 7 og 8, som vil være de mest hyppige kast. Tallene 6, 7 og 8 er de mest hyppige kast fordi der er flest forskellige kombinationer, der fremkommer af disse tal. 
-Normal fordelingen for 2 terninger kan ses p ̊a figur 7.1
+Normal fordelingen for 2 terninger kan ses på figur \footnote{https://emu.dk/sites/default/files/2020-06/normalfordelingen.pdf, side 19} 2
+
+\begin{figure} [h]
+    \centering
+    \includegraphics[width = 0.5\textwidth] {Billeder/normalfordelingen af 2 terninger.png}
+    \caption{Sandsynlighed for at slå antal øjne}
+    \label{fig:Sandsynligheden for at slå antal øjne}
+\end{figure}
 
 
+Vores test af terningerne er lavet i IntelliJ, som tager udgangspunkt i i de to terninger, som skal indgå i terningespillet. Terninger er blevet slået 10.000 gange for at få et mere præcis resultat. Man kan få et endnu mere præcis resultat, hvis man lavede flere terningkast, da det vil give flere observationer, og dermed en bedre normalfordeling. Derudover vil man få en pænere "klokke" formede kurve, hvis man havde et større interval af tal, da dette vil skabe en større spredning 
+Testen af vores 2 terninger kan se i følgende figur 3
 
-
+\begin{figure} [h]
+    \centering
+    \includegraphics{Billeder/test af terninger.png}
+    \caption {Normalfordelingen for terningekast med to terninger}
+    \label{fig: Normalfordelingenm for terningekast}
+\end{figure}
 \item
-Vores test af terningerne er lavet i IntelliJ, som tager udgangspunkt i i de to terninger, som skal indgå i terningespillet. Terninger er blevet slået 10.000 gange for at få et mere præcis resultat. Man kan få et endnu mere præcis resultat, hvis man lavede flere terningkast, da det vil give flere observationer, og dermed en bedre normalfordeling.
-Testen af vores 2 terninger kan se i følgende figur 7.2
-
-- billede af test
-
-
 \item
-Ved at sammenligne figur 7.1 og 7.2, kan man hurtigt se, at de som udgangs er meget ens. Begge figurer har en det som man kan karakterisere som en "klokke" formede kurve, som også var målet. Der er nogle små ud svingninger i vores kurve, som gør at den ikke er helt præcis og dermed ikke ligner normalfordelinger af 2 terninger. Dette vil kunne løses sig ved at lave flere kast, der vil give flere observationer, som vil gøre det mere præcist. 
+\item
+\item
+\item
+\item
+Ved at sammenligne figur 2 og 3, kan man hurtigt se, at de som udgangs er meget ens. Begge figurer har en det som man kan karakterisere som en "klokke" formede kurve, som også var målet. Der er nogle små ud svingninger i vores kurve, som gør at den ikke er helt præcis og dermed ikke ligner normalfordelinger af 2 terninger. Dette vil kunne løses sig ved at lave flere kast, der vil give flere observationer, som vil gøre det mere præcist. 
 
 
 \section{Konklusion}
+Vi har lavet et spil, der opfylder kundens krav. Dog er vi bevidste at vores kode kunne optimeres da meget af koden er genbrugt igennem programmet. Samtidig kunne vi have valgt at implementere koden i en GUI, men da det ikke var et krav og tiden var knap, udelod vi dette.
+\item Læringsmål indtil videre:
+Lav en test der faktisk kan teste hele spillet, så man ikke manuelt skal gennemgå hele spillet, hver gang man skal teste en ny linje kode.
+\item Undgå at bruge for lang tid på at lave diagrammer og modeller. 
+
 
 \section{Bilag}
 \subsection{Litteratur}
