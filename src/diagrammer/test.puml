@@ -1,19 +1,27 @@
 @startuml
 @startuml
-participant Game as Foo
-actor       Players       as Foo1
-participant  PlayerTurn    as Foo2
-participant   Dicex2 as Foo3
-participant  DieSum    as Foo4
-participant  Pointscounter      as Foo5
+actor       Players       as Foo
+participant Spilstart as Foo1
+participant Die as Foo2
+participant Points as Foo3
 
-Foo -> Foo1 : Play
-Foo1 --> Foo2 : int P1Turn \nint P2Turn
-Foo1 -> Foo3 : Player roll\nmath.Random()
-Foo3 -> Foo4 : int Sum = FaceValue1 \n+ FaceValue2
-Foo4 -> Foo5 : if \n(Sum < 40 || \nP1Turn > P2Turn ||\nSum1 = Sum2)\n SwitchPlayer()\nelse\nend game()
-Foo5 -> Foo1 : Switch player
-Foo5 -> Foo : End game
+Foo -> Foo1 : name()
+Foo -> Foo1 : fiftyFifty
+Foo1 --> Foo : math.random() \nint: mønt
+loop Points < 40
+Foo -> Foo2 : roll()
+Foo2 -> Foo3 : FaceValue()
+Foo <-- Foo3 : points.Add()
+end
+alt players points > 39
+loop player1.Points = player2.points
+Foo -> Foo2 : roll()
+Foo2 -> Foo3 : FaceValue()
+Foo <-- Foo3 : points.Add()
+end
+end
+
+
 @enduml
 
 
