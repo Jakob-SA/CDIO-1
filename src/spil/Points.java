@@ -1,6 +1,6 @@
 package spil;
 public class Points {
-    public int points, oneroll;
+    public int points;
     public Points(Players spiller) {
         points = 0;
     }

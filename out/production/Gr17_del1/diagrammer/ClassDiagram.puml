@@ -1,0 +1,39 @@
+@startuml
+'https://plantuml.com/class-diagram
+class Die {
+FaceValue: int
+getFaceValue()
+roll()
+}
+class Players {
+Name : String
+Point: int
+}
+class Points {
+Point : int
+add : int
+redemption : int
+add(die1,die2)
+redemption(die1, die2)
+}
+class SpilStart{
+mønt : int
+tast : String
+Spiller1Navn : String
+Spiller2Navn : String
+fiftyFifty()
+name()
+}
+
+Players "2" --> "2" Die
+SpilStart "1" -- "2" Players
+Die "2" --> "2..*" Points
+Points "2..*" --> "2" Players
+
+
+
+
+
+
+
+@enduml
