@@ -1,8 +1,5 @@
 import spil.*;
-
 import java.util.Scanner;
-
-
 public class Main {
     public static void main(String[] args) {
         SpilStart coinFlip = new SpilStart();
@@ -58,42 +55,9 @@ public class Main {
             System.out.println(Player2.Navn + " Har " + points2.points + " points.");       //printer akkumulerede points
         }
 
-
-    if (points1.points > 39 && points2.points > 39) {                           //begge har over 40 points
-        System.out.println("I har begge over 40 point. Jeres næste slag afgøre det");
-
-        String tast = "q";
-        while (tast != "") {
-            System.out.println("Det er " + Player1.Navn + "s tur.");
-            System.out.println("Tryk enter for at slå med terningerne!");
-            tast = input.nextLine();
-        }
-        System.out.println(die1.roll());            //spiller 1 slår med terninger
-        System.out.println(die2.roll());
-
-        points1.redemption(die1.getFaceValue(), die2.getFaceValue());
-
-        System.out.println(Player1.Navn + " Har " + points1.points + " points.");       //printer akkumulerede points
-
-        tast = "q";
-        while (tast != "") {
-            System.out.println("Det er " + Player2.Navn + "s tur.");
-            System.out.println("Tryk enter for at slå med terningerne!");
-            tast = input.nextLine();
-        }
-
-        System.out.println(die1.roll());            //spiller 2 slår med terninger
-        System.out.println(die2.roll());
-
-        points2.redemption(die1.getFaceValue(), die2.getFaceValue());          //lægger øjne til samlede points
-
-        System.out.println(Player2.Navn + " Har " + points2.points + " points.");       //printer akkumulerede points
-    }
-
-
-            if (points1.points > 39 && points2.points > 39) {                           //begge har over 40 points
-                System.out.println("I har begge over 40 point. Jeres næste slag afgøre det");
-
+        if (points1.points > 39 && points2.points > 39) {                           //begge har over 40 points
+            System.out.println("I har begge over 40 point. Jeres næste slag afgøre det");
+            do {
                 String tast = "q";
                 while (tast != "") {
                     System.out.println("Det er " + Player1.Navn + "s tur.");
@@ -120,45 +84,13 @@ public class Main {
                 points2.redemption(die1.getFaceValue(), die2.getFaceValue());          //lægger øjne til samlede points
 
                 System.out.println(Player2.Navn + " Har " + points2.points + " points.");       //printer akkumulerede points
-
+            } while (points1.points == points2.points);
         }
-
-        while(points1.points == points2.points){ //Starter redemption igen hvis begge spillere har samme antal point efter første slag
-            String tast = "q";
-            while (tast != "") {
-                System.out.println("Det er " + Player1.Navn + "s tur.");
-                System.out.println("Tryk enter for at slå med terningerne!");
-                tast = input.nextLine();
-            }
-            System.out.println(die1.roll());            //spiller 1 slår med terninger
-            System.out.println(die2.roll());
-
-            points1.redemption(die1.getFaceValue(), die2.getFaceValue());
-
-            System.out.println(Player1.Navn + " Har " + points1.points + " points.");       //printer akkumulerede points
-
-            tast = "q";
-            while (tast != "") {
-                System.out.println("Det er " + Player2.Navn + "s tur.");
-                System.out.println("Tryk enter for at slå med terningerne!");
-                tast = input.nextLine();
-            }
-
-            System.out.println(die1.roll());            //spiller 2 slår med terninger
-            System.out.println(die2.roll());
-
-            points2.redemption(die1.getFaceValue(), die2.getFaceValue());          //lægger øjne til samlede points
-
-            System.out.println(Player2.Navn + " Har " + points2.points + " points.");       //printer akkumulerede points
-        }
-
 
         if (points1.points > points2.points) {
             System.out.println("Tillykke " + Player1.Navn + "! Du har vundet!");
         } else {
             System.out.println("Tillykke " + Player2.Navn + "! Du har vundet!");
         }
-
     }
-
 }
